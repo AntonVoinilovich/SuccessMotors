@@ -24,41 +24,41 @@
 </style>
 <body>
     <div class="container">
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="was-validated">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
         <input type=hidden name='captcha_settings' value='{"keyname":"SuccessMotorsReCAPTCHA","fallback":"true","orgId":"00D5j000001tgyx","ts":""}'>
         <input type=hidden name="oid" value="00D5j000001tgyx">
         <input type=hidden name="retURL" value="http://google.com/">
 
         <div class="mb-3">
-            <label for="validationTextarea" class="form-label">Company: </label>
-            <input id="company" maxlength="40" name="company" size="20" type="text"
-            class="form-control is-invalid" id="validationTextarea" placeholder="Company" required />
+            <label for="company" class="form-label">Company: </label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" 
+            placeholder="Company" class="form-control" title="Набор из букв и цифр" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" required>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <label for="validationTextarea" class="form-label">First Name: </label>
+                <label for="first_name">First Name: </label>
                 <input id="first_name" maxlength="40" name="first_name" size="20" type="text"
-                class="form-control is-invalid" id="validationTextarea" placeholder="Will" required />
+                placeholder="Will" class="form-control" title="Набор из букв" pattern="^[а-яА-ЯёЁa-zA-Z]+$" required/>
             </div>
             <div class="col">
-                <label for="validationTextarea" class="form-label">Last Name: </label>
+                <label for="last_name">Last Name: </label>
                 <input id="last_name" maxlength="80" name="last_name" size="20" type="text"
-                class="form-control is-invalid" id="validationTextarea" placeholder="Smith" required />
+                placeholder="Smith" class="form-control" title="Набор из букв" pattern="^[а-яА-ЯёЁa-zA-Z]+$" required/>
             </div>
         </div>
         <div class="mb-3">
-            <label for="validationTextarea" class="form-label">Email: </label>
-            <input id="email" maxlength="80" name="email" size="20" type="text"
-            class="form-control is-invalid" id="validationTextarea" placeholder="MyEmail@gmail.com" required />
+            <label for="email">Email: </label>
+            <input id="email" maxlength="80" name="email" size="20" type="email"
+            placeholder="MyEmail@gmail.com" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required class="form-control"/>
         </div>
         <div class="mb-3">
-            <label for="validationTextarea" class="form-label">Phone: </label>
+            <label for="phone">Phone: </label>
             <input id="phone" maxlength="40" name="phone" size="20" type="text"
-            class="form-control is-invalid" id="validationTextarea" placeholder="375299999999" required />
+            placeholder="375299999999" title="Набор чисел" pattern="^[0-9]{6,20}$" required class="form-control"/>
         </div>
         <div class="mb-3">
             <label>Product: </label>
-            <select id="00N5j000003Zsqm" name="00N5j000003Zsqm"  class="form-select" required aria-label="select example">
+            <select id="00N5j000003Zsqm" name="00N5j000003Zsqm" class="form-select">
                 <option value="R001C1">Renault Logan</option>
                 <option value="R002C2">Renault Logan Stepway</option>
                 <option value="R003C3">Renault Sandero</option>
